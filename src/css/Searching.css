@@ -1,0 +1,12 @@
+.search {
+    float: center;
+    background-color: #fff;
+    width: 300px;
+    margin:50px 10px 10px 100px;
+}
+
+.rating {
+    color : gold;
+    margin-top: 2px;
+    margin-left: 100px;
+} 
