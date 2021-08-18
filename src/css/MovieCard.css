@@ -5,14 +5,7 @@
   margin: 0;
 }
 
-/*html, body{
-  margin: 0;
-  background: white;
-  font-family: 'Montserrat', helvetica, arial, sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-}
-*/
+
 .movie_card {
   position: relative;
   display: block;
@@ -22,6 +15,8 @@
   overflow: hidden;
   border-radius: 10px;
   transition: all 0.4s;
+  color:antiquewhite
+
 }
 
 .movie_card:hover {
@@ -36,7 +31,7 @@
   background-blend-mode: multiply;
   z-index: 2;
   border-radius: 10px;
-  
+
 }
 
 

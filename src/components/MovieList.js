@@ -13,7 +13,9 @@ const MovieList =({movies  , searchByName,searchByRate}) => {
           .map((movie, i) => (
          
               <MovieCard  key={i} movie={movie}/>
-          ))}
+              
+                        ))}
+                        
 </div>
 </div>
     )

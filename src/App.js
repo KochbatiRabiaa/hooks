@@ -3,8 +3,11 @@ import "./App.css";
 import MovieList from "./components/MovieList";
 import AddMovie from "./components/AddMovie";
 import Searching from "./components/Searching";
+import { BrowserRouter , Route , Switch } from "react-router-dom";
+/*import MovieCard from "./components/MovieCard";*/
+import Description from "./components/Description";
 
-import "bootstrap/dist/css/bootstrap.min.css";
+/*import "bootstrap/dist/css/bootstrap.min.css";*/
 
 function App() {
   // eslint-disable-next-line
@@ -85,6 +88,7 @@ function App() {
   const [searchByRate, setSearchByRate]=useState("1")
 
   return (
+    <BrowserRouter>
     <div>
       <Searching setSearchByName={setSearchByName} 
                  searchByRate={searchByRate} 
@@ -95,7 +99,13 @@ function App() {
       <div style={{ display: "flex", justifyContent: "center" }}>
         <AddMovie addMovie={addMovie} />
       </div>
+
     </div>
+    <Switch>
+    <Route  exact path="/" render={()=>{<MovieList movies={movies} searchByName ={searchByName} searchByRate={searchByRate} ></MovieList>}}> </Route>
+    <Route   exact path="/description" component={Description} /> 
+    </Switch>
+    </BrowserRouter>
   );
 }
 
