@@ -6,9 +6,9 @@ const Rating = ({ rate , setSearchByRate }) => {
     let starsArray = [];
     for (let i = 1; i <= 5; i++) {
       if (i <= y) {
-        starsArray.push(<span onClick={()=>setSearchByRate(i) }>★</span>);
+        starsArray.push(<span style={{ color: 'gold',fontSize: '30px'}}  onClick={()=>setSearchByRate(i) }>★</span>);
       } else {
-        starsArray.push(<span onClick={()=>setSearchByRate(i) }>☆</span>);
+        starsArray.push(<span style={{ color: 'gold',fontSize: '30px'}}  onClick={()=>setSearchByRate(i) }>☆</span>);
       }
     }
     return starsArray;
