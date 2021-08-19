@@ -3,11 +3,8 @@ import "./App.css";
 import MovieList from "./components/MovieList";
 import AddMovie from "./components/AddMovie";
 import Searching from "./components/Searching";
-import { BrowserRouter , Route , Switch } from "react-router-dom";
-/*import MovieCard from "./components/MovieCard";*/
-import Description from "./components/Description";
 
-/*import "bootstrap/dist/css/bootstrap.min.css";*/
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   // eslint-disable-next-line
@@ -15,8 +12,8 @@ function App() {
     {
       title: "The Avengers",
       year: "2012",
-      rate: 5,
-      type: "action | drama",
+      rate: 4,
+      type: "Sci-Fi",
       description:
         "Est aute mollit nulla consectetur culpa velit est. Ea sunt tempor duis exercitation minim anim fugiat ut dolore.",
       poster:
@@ -37,7 +34,7 @@ function App() {
       title: "Ultimate Avengers: The Movie",
       year: "2006",
       rate: "2",
-      type: "action | drama",
+      type: "action",
       description:
         "Est aute mollit nulla consectetur culpa velit est. Ea sunt tempor duis exercitation minim anim fugiat ut dolore. ",
       poster:
@@ -45,9 +42,9 @@ function App() {
     },
     {
       title: "The Avengers",
-      year: "1961–1969",
+      year: "1961",
       rate: "5",
-      type: "action | drama",
+      type: "action|Sci-Fi",
       description:
         "Est aute mollit nulla consectetur culpa velit est. Ea sunt tempor duis exercitation minim anim fugiat ut dolore.",
       poster:
@@ -55,9 +52,9 @@ function App() {
     },
     {
       title: "The New Avengers",
-      year: "1976–1977",
+      year: "1977",
       rate: "3",
-      type: "action | drama",
+      type: "adventure",
       description:
         "Est aute mollit nulla consectetur culpa velit est. Ea sunt tempor duis exercitation minim anim fugiat ut dolore.",
       poster:
@@ -65,7 +62,7 @@ function App() {
     },
     {
       title: "Marvel Disk Wars: The Avengers",
-      year: "2014–2015",
+      year: "2015",
       rate: 3,
       type: "action | drama",
       description:
@@ -88,7 +85,6 @@ function App() {
   const [searchByRate, setSearchByRate]=useState("1")
 
   return (
-    <BrowserRouter>
     <div>
       <Searching setSearchByName={setSearchByName} 
                  searchByRate={searchByRate} 
@@ -99,13 +95,7 @@ function App() {
       <div style={{ display: "flex", justifyContent: "center" }}>
         <AddMovie addMovie={addMovie} />
       </div>
-
     </div>
-    <Switch>
-    <Route  exact path="/" render={()=>{<MovieList movies={movies} searchByName ={searchByName} searchByRate={searchByRate} ></MovieList>}}> </Route>
-    <Route   exact path="/description" component={Description} /> 
-    </Switch>
-    </BrowserRouter>
   );
 }
 
